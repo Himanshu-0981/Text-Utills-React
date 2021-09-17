@@ -1,3 +1,5 @@
+import './App.css';
+
 function App(){
     return (
         <div>
@@ -23,6 +25,7 @@ function App(){
     </div>
   </div>
 </nav>
+      <p className="p-tag">This is a P tag</p>
         </div>
     )
 }
