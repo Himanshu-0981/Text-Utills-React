@@ -26,6 +26,7 @@ function App(){
   </div>
 </nav>
       <p className="p-tag">This is a P tag</p>
+      <p className="p-tag-2">This is 2nd p</p>
         </div>
     )
 }
