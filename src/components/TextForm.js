@@ -20,15 +20,17 @@ export default function TextForm(props) {
     const onChange = (event) =>{
         setText(event.target.value)
     }
-    
-    const [text , setText] = useState("Enter Text here");
+    let someText = ""
+    const [text , setText] = useState(someText);
 
+    
 
     return (
-        <div>
+        <>
+        <div className="container">
             <h1>{props.title}</h1>
             <div className="mb-3">
-                <textarea className="form-control" value = {text}  onChange={onChange} id="myBox"rows="6"></textarea>
+                <textarea  className="form-control"  value = {text}  onChange={onChange} id="myBox"rows="6"></textarea>
             </div>
             <div className="container d-flex justify-content-between">
             <button className="btn-primary" onClick={onClickUp} >Convert To UpperCase</button>
@@ -36,5 +38,13 @@ export default function TextForm(props) {
             <button className="btn-primary" onClick={onClickLow} >Convert To LowerCase</button>
             </div>
         </div>
+        <div className="container">
+            <h1>Your text summary</h1>
+            <p>{text.split(" ").length} words and {text.length} characters</p>
+            <p>{0.008 *text.split(' ').length} Minutes read</p>
+            <h2>Preview</h2>
+            <p>{text}</p>
+        </div>
+        </>
     );
 }
